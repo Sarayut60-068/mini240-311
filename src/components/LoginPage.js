@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBInput } from 'mdbreact';
+import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBInput, MDBIcon } from 'mdbreact';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
@@ -66,22 +66,15 @@ const LoginPage = () => {
                   or Sign up with h
                 </p>
               </MDBRow>
-              {/* <div className="row my-3 d-flex justify-content-center">
+              <div className="row my-3 d-flex justify-content-center">
                   <MDBBtn type="button" color="white" rounded className="mr-md-3 z-depth-1a">
                       <MDBIcon fab icon="facebook-f" className="blue-text text-center" /></MDBBtn>
                   <MDBBtn type="button" color="white" rounded className="mr-md-3 z-depth-1a">
                       <MDBIcon fab icon="twitter" className="blue-text" /></MDBBtn>
                   <MDBBtn type="button" color="white" rounded className="z-depth-1a">
                       <MDBIcon fab icon="google-plus-g" className="blue-text" /></MDBBtn>
-                </div> */}
-              {/* <div className="row my-3 d-flex justify-content-center">
-                  <MDBBtn type="button" color="white" rounded className="mr-md-3 z-depth-1a">
-                      <MDBIcon fab icon="facebook-f" className="blue-text text-center" /></MDBBtn>
-                  <MDBBtn type="button" color="white" rounded className="mr-md-3 z-depth-1a">
-                      <MDBIcon fab icon="twitter" className="blue-text" /></MDBBtn>
-                  <MDBBtn type="button" color="white" rounded className="z-depth-1a">
-                      <MDBIcon fab icon="google-plus-g" className="blue-text" /></MDBBtn>
-                </div> */}
+                </div>
+             
             </div>
 
           </form>
