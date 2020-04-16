@@ -74,6 +74,14 @@ const LoginPage = () => {
                   <MDBBtn type="button" color="white" rounded className="z-depth-1a">
                       <MDBIcon fab icon="google-plus-g" className="blue-text" /></MDBBtn>
                 </div> */}
+                {/* <div className="row my-3 d-flex justify-content-center">
+                  <MDBBtn type="button" color="white" rounded className="mr-md-3 z-depth-1a">
+                      <MDBIcon fab icon="facebook-f" className="blue-text text-center" /></MDBBtn>
+                  <MDBBtn type="button" color="white" rounded className="mr-md-3 z-depth-1a">
+                      <MDBIcon fab icon="twitter" className="blue-text" /></MDBBtn>
+                  <MDBBtn type="button" color="white" rounded className="z-depth-1a">
+                      <MDBIcon fab icon="google-plus-g" className="blue-text" /></MDBBtn>
+                </div> */}
             </div>
             
           </form>
