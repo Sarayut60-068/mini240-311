@@ -6,9 +6,6 @@ import "mdbreact/dist/css/mdb.css";
 import './LoginForm.css'
 import fire from '../firebasa/fire'
 
-
-
-
 document.body.style.backgroundImage = "url('https://wallpaper.campus-star.com/app/uploads/2017/09/wallpaper-n-40.jpg')";
 
 const LoginPage = () => {
@@ -36,6 +33,8 @@ const LoginPage = () => {
             console.log(err)
         })
     }
+
+    
 
 
     return (
@@ -72,7 +71,7 @@ const LoginPage = () => {
                             <MDBRow className='d-flex justify-content-center'>
                                 <p className='font-small white-text mb-2 pt-3'>
                                     or Sign up with h
-                </p>
+                                </p>
                             </MDBRow>
 
 

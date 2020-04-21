@@ -12,6 +12,35 @@ import contact from './components/contact';
 
 
 class App extends Component {
+
+  // firebase.initializeApp({
+  //   apiKey: "AIzaSyADl0VGdoA45liNiderICdVjgIxwlSEtLk",
+  //   authDomain: "myappjan.firebaseapp.com",
+  // })
+  
+ 
+  //   state = { isSignedIn: false }
+  //   uiConfig = {
+  //     signInFlow: "popup",
+  //     signInOptions: [
+  //       firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+  //       firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+  //       firebase.auth.GithubAuthProvider.PROVIDER_ID
+        
+  //     ],
+  //     callbacks: {
+  //       signInSuccess: () => false
+  //     }
+  //   }
+  // componentDidMount = () => {
+  //     firebase.auth().onAuthStateChanged(user => {
+  //       this.setState({ isSignedIn: !!user })
+  //       console.log("user", user)
+  //     })
+  //   }
+
+
+
   constructor(props) {
     super(props)
     this.state = {
@@ -48,6 +77,8 @@ class App extends Component {
           <Route path="/contact" component={contact} />
         </div>
       </div>
+
+
     )
   }
 }
