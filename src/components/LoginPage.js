@@ -8,10 +8,35 @@ import fire from '../firebasa/fire'
 
 document.body.style.backgroundImage = "url('https://wallpaper.campus-star.com/app/uploads/2017/09/wallpaper-n-40.jpg')";
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const LoginPage = () => {
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    
+
 
     const login = e => {
 
