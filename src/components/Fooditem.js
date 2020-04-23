@@ -2,57 +2,159 @@ import React from 'react'
 import { Button, Navbar, Nav, Form } from 'react-bootstrap'
 import './contact';
 import './Fooditem';
-import {
-    MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBFormInline,
-    MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem
-    } from "mdbreact";
-import { TabContent, TabPane, NavItem, NavLink,  Row, Col } from 'reactstrap';
-/* Fooditem */
+import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBInput,MDBMedia } from 'mdbreact';
+
+
+
 const Fooditem = props => {
 
-    return (
-        <div>
-            <Navbar bg="dark" variant="dark">
-                <Navbar.Brand href='/'>หน้าแรก</Navbar.Brand>
-                <Nav className="mr-auto">
-                    <Nav.Link href="/Fooditem ">รายการอาหาร</Nav.Link>
-                    <Nav.Link href="/contact ">ติดต่อเรา</Nav.Link>
-                </Nav>
-            </Navbar>
-            <div>
-                
-            <div>
-            
-            <MDBNavbar color="cyan" dark expand="md">
-                <MDBNavbarBrand>
-                    <strong className="white-text">กรอกข้อมูล</strong>
-                </MDBNavbarBrand>
-            </MDBNavbar>
-            
-            
-        
+  return (
+    <div>
+      <Navbar bg="dark" variant="dark">
+        <Navbar.Brand href='/'>หน้าแรก</Navbar.Brand>
+        <Nav className="mr-auto">
+          <Nav.Link href="/Fooditem ">รายการอาหาร</Nav.Link>
+          <Nav.Link href="/contact ">ติดต่อเรา</Nav.Link>
+        </Nav>
+      </Navbar>
+
+      <div >
 
 
+ 
+<body>
+
+       <MDBMedia>
+      <MDBMedia left className="mr-3" href="#" class="card" >
+        <MDBMedia object src="https://img.wongnai.com/p/1920x0/2017/06/16/d6336a363f194e8a8c3bc82ea46f2cd2.jpg" width="500" height="400"  />
+      </MDBMedia>
+      <MDBMedia body>
+        <MDBMedia heading>
+          ก๋วยเตี๋ยวหมูแดง
+      </MDBMedia>
+        ธรรมดา 40 บาท <br/>
+        พิเศษ 50 บาท <br/>
+        เส้นมีให้เลือกหลากหลาย เช่น หมี่ขาว เส้นเล็ก เส้นใหญ่ วุ้นเล้น  หมี่หยก และ มาม่า
+    </MDBMedia>
+    </MDBMedia>
+                    
+</body> 
+
+<body>
+
+       <MDBMedia>
+      <MDBMedia left className="mr-3" href="#" class="card">
+        <MDBMedia object src="https://img.wongnai.com/p/1920x0/2015/07/23/a59728420cb343539e7e7cadbcc9f1d0.jpg" width="500" height="400"  />
+      </MDBMedia>
+      <MDBMedia body>
+        <MDBMedia heading>
+          ก๋วยเตี๋ยวหมูต้มยำ
+      </MDBMedia>
+      ธรรมดา 40 บาท <br/>
+        พิเศษ 50 บาท <br/>
+        เส้นมีให้เลือกหลากหลาย เช่น หมี่ขาว เส้นเล็ก เส้นใหญ่ วุ้นเล้น  หมี่หยก และ มาม่า
+    </MDBMedia>
+    </MDBMedia>
+                    
+</body> 
+
+<body>
+
+       <MDBMedia>
+      <MDBMedia left className="mr-3" href="#" class="card">
+        <MDBMedia object src="https://img.wongnai.com/p/1920x0/2019/05/19/2556580ec10145bba6555ffc11efa436.jpg" width="500" height="400"  />
+      </MDBMedia>
+      <MDBMedia body>
+        <MDBMedia heading>
+          ก๋วยเตี๋ยวหมูน้ำใส
+      </MDBMedia>
+      ธรรมดา 40 บาท <br/>
+        พิเศษ 50 บาท <br/>
+        เส้นมีให้เลือกหลากหลาย เช่น หมี่ขาว เส้นเล็ก เส้นใหญ่ วุ้นเล้น  หมี่หยก และ มาม่า
+    </MDBMedia>
+    </MDBMedia>
+                    
+</body> 
+
+<body>
+
+       <MDBMedia>
+      <MDBMedia left className="mr-3" href="#" class="card" >
+        <MDBMedia object src="https://img.wongnai.com/p/1300x640/2018/08/27/e58ac3fe2172470691eaef131446d282.jpg" width="500" height="400" />
+      </MDBMedia>
+      <MDBMedia body>
+        <MDBMedia heading>
+          ก๋วยน้ำข้น
+      </MDBMedia>
+      ธรรมดา 40 บาท <br/>
+        พิเศษ 50 บาท <br/>
+        เส้นมีให้เลือกหลากหลาย เช่น หมี่ขาว เส้นเล็ก เส้นใหญ่ วุ้นเล้น  หมี่หยก และ มาม่า
+    </MDBMedia>
+    </MDBMedia>
+                    
+</body> 
+
+<body>
+
+       <MDBMedia>
+      <MDBMedia left className="mr-3" href="#" class="card">
+        <MDBMedia object src="https://4.bp.blogspot.com/-zDyqZ0tUQf4/VNngPFlRdPI/AAAAAAAADMM/8URJMXPkgzo/s1600/%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3%E0%B8%81%E0%B9%8B%E0%B8%A7%E0%B8%A2%E0%B9%80%E0%B8%95%E0%B8%B5%E0%B9%8B%E0%B8%A2%E0%B8%A7%E0%B9%80%E0%B8%A2%E0%B9%87%E0%B8%99%E0%B8%95%E0%B8%B2%E0%B9%82%E0%B8%9F.jpg" width="500" height="400"  />
+      </MDBMedia>
+      <MDBMedia body>
+        <MDBMedia heading>
+          ก๋วยเตี๋ยวเย็นตาโฟ
+          </MDBMedia>
+          ธรรมดา 40 บาท <br/>
+        พิเศษ 50 บาท <br/>
+        เส้นมีให้เลือกหลากหลาย เช่น หมี่ขาว เส้นเล็ก เส้นใหญ่ วุ้นเล้น  หมี่หยก และ มาม่า
+    </MDBMedia>
+    </MDBMedia>
+                    
+</body> 
+
+<body>
+
+       <MDBMedia>
+      <MDBMedia left className="mr-3" href="#" class="card">
+        <MDBMedia object src="https://pbs.twimg.com/media/DgRJnyEVQAAz7Jn.jpg" width="500" height="400"  />
+      </MDBMedia>
+      <MDBMedia body>
+        <MDBMedia heading>
+          ก๋วยจั๊บ
+          </MDBMedia>
+          ธรรมดา 40 บาท <br/>
+        พิเศษ 50 บาท <br/>
+        เส้นมีให้เลือกหลากหลาย เช่น หมี่ขาว เส้นเล็ก เส้นใหญ่ วุ้นเล้น  หมี่หยก และ มาม่า
+    </MDBMedia>
+    </MDBMedia>
+                    
+</body> 
+
+<body>
+
+       <MDBMedia>
+      <MDBMedia left className="mr-3" href="#" class="card">
+        <MDBMedia object src="https://scontent.fbkk5-3.fna.fbcdn.net/v/t1.0-9/51007932_1180566005480596_2977294032784326656_n.jpg?_nc_cat=111&_nc_sid=110474&_nc_eui2=AeExK3dLQ3BX6Xwbyc8W1RRL8i_dwK5xJgXyL93ArnEmBUhKHEP1NnblUXiJVURlqJdt23KPaYo5CzSWZbLBw6Pf&_nc_ohc=KDrkMjKz-TcAX8nPY9X&_nc_ht=scontent.fbkk5-3.fna&oh=f4ab9557ae5f6bbbdeb6e8479389eb8a&oe=5EC7FA11" width="500" height="400" />
+      </MDBMedia>
+      <MDBMedia body>
+        <MDBMedia heading>
+          ก๋วยเตี๋ยวหมู  แห้ง
+          </MDBMedia>
+          ธรรมดา 40 บาท <br/>
+        พิเศษ 50 บาท <br/>
+        เส้นมีให้เลือกหลากหลาย เช่น หมี่ขาว เส้นเล็ก เส้นใหญ่ วุ้นเล้น  หมี่หยก และ มาม่า
+    </MDBMedia>
+    </MDBMedia>
+                    
+</body> 
 
 
+     
+            </div>
 
 
-        </div>
-    
-
-
-    
-
-
-
-
-
-
-                
-                </div>
-        </div>
-
-    )
+    </div>
+  )
 }
 
 export default Fooditem;

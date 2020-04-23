@@ -3,7 +3,6 @@ import React, { Component } from "react";
 import './App.css';
 import LoginPage from './components/LoginPage';
 import Start from './components/Start';
-// import { Route } from 'react-router-dom';
 import { BrowserRouter, Route, Link, Router, Redirect } from 'react-router-dom';
 import fire from './firebasa/fire'
 
@@ -12,32 +11,6 @@ import contact from './components/contact';
 
 
 class App extends Component {
-
-  // firebase.initializeApp({
-  //   apiKey: "AIzaSyADl0VGdoA45liNiderICdVjgIxwlSEtLk",
-  //   authDomain: "myappjan.firebaseapp.com",
-  // })
-  
- 
-  //   state = { isSignedIn: false }
-  //   uiConfig = {
-  //     signInFlow: "popup",
-  //     signInOptions: [
-  //       firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-  //       firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-  //       firebase.auth.GithubAuthProvider.PROVIDER_ID
-        
-  //     ],
-  //     callbacks: {
-  //       signInSuccess: () => false
-  //     }
-  //   }
-  // componentDidMount = () => {
-  //     firebase.auth().onAuthStateChanged(user => {
-  //       this.setState({ isSignedIn: !!user })
-  //       console.log("user", user)
-  //     })
-  //   }
 
 
 
@@ -65,6 +38,7 @@ class App extends Component {
       return (
         <div>
           <LoginPage />
+          
         </div>
       );
     }
@@ -83,3 +57,5 @@ class App extends Component {
   }
 }
 export default App
+
+
