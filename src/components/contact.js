@@ -16,11 +16,11 @@ const contact = props => {
           <Nav.Link href="/contact ">ติดต่อเรา</Nav.Link>
         </Nav>
       </Navbar>
-      <div>
-        <MDBContainer>
+      <div >
+        <MDBContainer class="between">
           <MDBRow>
-            <MDBCol md="6">
-              <form>
+            <MDBCol md="6 ">
+              <form >
                 <p className="h5 text-center mb-4">กรอกข้อมูล</p>
                 <div className="grey-text">
                   <MDBInput label="ชื่อ" icon="user" group type="text" validate error="wrong"
