@@ -17,7 +17,7 @@ const Topborder = () => {
                 <Navbar.Brand href='/'>หน้าแรก</Navbar.Brand>
                 <Nav className="mr-auto">
                     <Nav.Link href="/Fooditem ">รายการอาหาร</Nav.Link>
-                    <Nav.Link href="/contact ">ติดต่อเรา</Nav.Link>
+                    <Nav.Link href="/contact ">สั่งอาหาร</Nav.Link>
                 </Nav>
                 <Form inline>
                     <Button variant="outline-info" onClick={logout}>LogOut</Button>
@@ -28,47 +28,46 @@ const Topborder = () => {
                 <div class="p-2 bd-highlight">
                     <body>
                         <div>
-                            {/* <img src="https://img.wongnai.com/p/1920x0/2016/11/18/39f0b234450c4329977ac59f6fcd0976.jpg"
-                                 class="img-fluid" alt="Responsive image"/> */}
 
-<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="http://m.my-eat.myreadyweb.com//storage/20/97276/images/product/content/c2a/c2abb72901b3f7bc29bf111b1d665a75/content_224654_1012047453.jpg" class="d-block w-100" alt="..."></img>
-      <div class="carousel-caption d-none d-md-block">
-        <h5>เมนูขายยอดฮิต ก๋วยเตี๋ยวหมูแดง แห้ง</h5>
-        <p>ภาพใช้ในการโฆษณา</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="https://food.mthai.com/app/uploads/2018/12/noodle014.jpg" class="d-block w-100" alt="..."></img>
-      <div class="carousel-caption d-none d-md-block">
-        <h5>เมนูขายยอดฮิต ก๋วยเตี๋ยวน่องไก่</h5>
-        <p>ภาพใช้ในการโฆษณา</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="https://img.wongnai.com/p/1920x0/2018/04/21/be800be7f3724d9f8c3dc37061e0b508.jpg" class="d-block w-100" alt="..."></img>
-      <div class="carousel-caption d-none d-md-block">
-        <h5>เมนูขายยอดฮิต ก๋วยเตี๋ยวหมูเครื่องใน</h5>
-        <p>ภาพใช้ในการโฆษณา</p>
-      </div>
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
+
+                            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                                    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="http://m.my-eat.myreadyweb.com//storage/20/97276/images/product/content/c2a/c2abb72901b3f7bc29bf111b1d665a75/content_224654_1012047453.jpg" class="d-block w-100" alt="..."></img>
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h5>เมนูขายยอดฮิต ก๋วยเตี๋ยวหมูแดง แห้ง</h5>
+                                            <p>ภาพใช้ในการโฆษณา</p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://food.mthai.com/app/uploads/2018/12/noodle014.jpg" class="d-block w-100" alt="..."></img>
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h5>เมนูขายยอดฮิต ก๋วยเตี๋ยวน่องไก่</h5>
+                                            <p>ภาพใช้ในการโฆษณา</p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://img.wongnai.com/p/1920x0/2018/04/21/be800be7f3724d9f8c3dc37061e0b508.jpg" class="d-block w-100" alt="..."></img>
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h5>เมนูขายยอดฮิต ก๋วยเตี๋ยวหมูเครื่องใน</h5>
+                                            <p>ภาพใช้ในการโฆษณา</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
 
 
                         </div>
@@ -92,7 +91,7 @@ const Topborder = () => {
                                         <div >
                                             <img src="https://scontent.fbkk5-8.fna.fbcdn.net/v/t1.0-9/94257577_1598527560351103_936420870459490304_n.jpg?_nc_cat=106&_nc_sid=110474&_nc_eui2=AeGR-zp6HnrYcTHNwcd-M2guu1vIk32qbzK7W8iTfapvMt7yVAfcrR_RekprYsykEYUPIBbIs6NLRzPDyDa-RYri&_nc_ohc=zW0dd74wmHwAX9hICa6&_nc_ht=scontent.fbkk5-8.fna&oh=2bc8a1142da22f55d95ce65c7a280605&oe=5EC8244B"
                                                 width="200" height="300" />
-                                                
+
                                         </div>
                                     </div>
                                     <div class="p-2 bd-highlight">
