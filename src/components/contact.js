@@ -126,7 +126,7 @@ const contact = props => {
 
                         <div class="md-form">
                             <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
-                            <label for="message">Your message</label>
+                            <label for="message" >Your message</label>
                         </div>
 
                     </div>
@@ -136,6 +136,8 @@ const contact = props => {
 
             <div class="text-center text-md-left">
                 <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
+                <a>...or...</a>
+                <a href="mailto:s6035512068@phuket.psu.ac.th">Click to send email</a>
             </div>
             <div class="status"></div>
         </div>
