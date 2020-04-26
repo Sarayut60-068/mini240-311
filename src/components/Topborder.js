@@ -3,7 +3,10 @@ import fire from '../firebasa/fire';
 import { Button, Navbar, Nav, Form } from 'react-bootstrap'
 import './contact';
 import './Fooditem';
-import { MDBMedia } from 'mdbreact';
+import './Reviews';
+import { MDBMedia ,MDBIcon} from 'mdbreact';
+
+
 
 const Topborder = () => {
 
@@ -18,6 +21,7 @@ const Topborder = () => {
                 <Nav className="mr-auto">
                     <Nav.Link href="/Fooditem ">รายการอาหาร</Nav.Link>
                     <Nav.Link href="/contact ">สั่งอาหาร</Nav.Link>
+                    <Nav.Link href="/Reviews ">Reviews</Nav.Link>
                 </Nav>
                 <Form inline>
                     <Button variant="outline-info" onClick={logout}>LogOut</Button>
@@ -87,12 +91,11 @@ const Topborder = () => {
                         <div class="p-2 bd-highlight">
                             <div class="d-flex align-items-center">
                                 <div class="d-flex justify-content-around">
-                                    <div class="p-2 bd-highlight">
+                                    <div class="p-2 bd-highlight view zoom">
                                         <div >
                                             <img src="https://scontent.fbkk5-8.fna.fbcdn.net/v/t1.0-9/94257577_1598527560351103_936420870459490304_n.jpg?_nc_cat=106&_nc_sid=110474&_nc_eui2=AeGR-zp6HnrYcTHNwcd-M2guu1vIk32qbzK7W8iTfapvMt7yVAfcrR_RekprYsykEYUPIBbIs6NLRzPDyDa-RYri&_nc_ohc=zW0dd74wmHwAX9hICa6&_nc_ht=scontent.fbkk5-8.fna&oh=2bc8a1142da22f55d95ce65c7a280605&oe=5EC8244B"
-                                                width="200" height="300" />
-
-                                        </div>
+                                                width="200" height="300"  />
+                                          </div>
                                     </div>
                                     <div class="p-2 bd-highlight">
                                         <div>
@@ -157,6 +160,7 @@ const Topborder = () => {
                             </div>
                         </div>
                     </div>
+                    
 
                     <div class="p-2 bd-highlight">
                         <body>

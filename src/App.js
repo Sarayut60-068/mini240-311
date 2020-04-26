@@ -8,11 +8,9 @@ import fire from './firebasa/fire'
 
 import Fooditem from './components/Fooditem';
 import contact from './components/contact';
-
+import Reviews from './components/Reviews';
 
 class App extends Component {
-
-
 
   constructor(props) {
     super(props)
@@ -49,6 +47,7 @@ class App extends Component {
           <Route path="/login" component={LoginPage} />
           <Route path="/Fooditem" component={Fooditem} />
           <Route path="/contact" component={contact} />
+          <Route path="/Reviews" component={Reviews} />
         </div>
       </div>
 

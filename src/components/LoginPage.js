@@ -1,131 +1,143 @@
-import React, { useState } from "react";
-import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBInput, MDBIcon} from 'mdbreact';
-import '@fortawesome/fontawesome-free/css/all.min.css';
-import "bootstrap-css-only/css/bootstrap.min.css";
-import "mdbreact/dist/css/mdb.css";
-import './LoginForm.css'
-import fire from '../firebasa/fire';
+import React, { Component } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import {
+  MDBNavbar, MDBNavbarBrand, MDBMask, MDBRow, MDBCol, MDBIcon, MDBBtn, MDBView, MDBContainer, MDBCard, MDBCardBody, MDBInput, MDBAnimation
+} from "mdbreact";
+
+import fire from "../firebasa/fire";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth'
+import firebase from 'firebase'
 
 
-// import './SignInScreen';
- import 'firebase/auth';
- import firebase from 'firebase/app';
+document.body.style.backgroundImage = "url('https://c.wallhere.com/photos/1f/7f/Haruhara_Haruko_FLCL_anime_noodles_simple_background-210624.jpg!d')";
 
-  
+class LoginPage extends Component {
 
-document.body.style.backgroundImage = "url('https://wallpaper.campus-star.com/app/uploads/2017/09/wallpaper-n-40.jpg')";
+  constructor(props) {
 
+    super(props)
+    this.login = this.login.bind(this)
+    this.handleChange = this.handleChange.bind(this)
+    this.sigup = this.sigup.bind(this)
+    this.state = {
 
+      email: "",
+      password: "",
+      isSignedIn: false
 
-
-const LoginPage = () => {
-
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
-    
-    const login = e => {
-
-        e.preventDefault();
-        fire.auth().signInWithEmailAndPassword(email, password).then((u) => {
-            console.log(u)
-        }).catch((err) => {
-            console.log(err)
-        })
     }
 
+  }
 
-    const signup = e => {
+  uiConfig = {
 
-        e.preventDefault()
-        fire.auth().createUserWithEmailAndPassword(email, password).then((u) => {
-            console.log(u)
-        }).catch((err) => {
-            console.log(err)
-        })
+    signInFlow: "popup",
+    signInOptions: [
+
+      firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+      firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+      firebase.auth.GithubAuthProvider.PROVIDER_ID,
+     
+
+    ],
+
+    callback: {
+
+      signInSuccess: () => false
     }
+  }
 
+  componentDidMount() {
 
+    firebase.auth().onAuthStateChanged(user => {
+      this.setState({ isSignedIn: !!user })
+    })
+  }
 
-    
+  login(e) {
 
+    e.preventDefault()
 
+    fire.auth().signInWithEmailAndPassword(this.state.email, this.state.passeword).then((u) => {
+      console.log(u)
+    }).catch((err) => {
+      console.log(err)
+    })
 
+  }
+
+  handleChange(e) {
+    this.setState({
+      [e.target.name]: e.target.value
+    })
+  }
+
+  sigup(e) {
+    e.preventDefault()
+    fire.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then((u) => {
+      console.log(u)
+    }).catch((err) => {
+      console.log(err)
+    })
+  }
+
+  render() {
 
     return (
-        <MDBContainer >
-            <div class="text-center">
+
+      <div id="classicformpage">
+       
+        
+
+        <MDBView>
+          <MDBMask className="d-flex justify-content-center align-items-center gradient ">
+            <MDBContainer  className=' align-items-center'>
+              <MDBRow>
+              
+
+                <MDBCol md="6" xl="5" className="mb-4">
+                  <MDBAnimation type="fadeInRight" delay=".3s">
+                    <MDBCard id="classic-card">
+                      <MDBCardBody className="white-text ">
+                      <div class="text-center">
                 <img src="https://scontent.fbkk5-4.fna.fbcdn.net/v/t1.0-9/s960x960/51095734_1180564112147452_1471511896472420352_o.jpg?_nc_cat=110&_nc_sid=85a577&_nc_eui2=AeGcYscU0D2jhgjcw8RJJmATiCYbrg_vJOKIJhuuD-8k4ufJGBh_aq5uVbBPKZAmHEeVioJYXb-fw_fHJ69o_9dV&_nc_ohc=ucUfD9erfzMAX-sW2ZD&_nc_ht=scontent.fbkk5-4.fna&_nc_tp=7&oh=db36bcaa38686ff1a60b548052466595&oe=5EBD6C9A"
                     className="img-thumbnail justify-content-center " width="200" height="90" /></div>
+                        <h3 className="text-center">
+                          <MDBIcon icon="user" /> Register:
+                        </h3>
+                        <hr className="hr-light" />
+                        <MDBInput
+                          className="white-text" iconClass="white-text" label="Your email" roup type="email" name="email" validate error="wrong"
+                          success="right" icon="envelope" value={this.state.email} onChange={this.handleChange}/>
+                        <MDBInput
+                          className="white-text"  iconClass="white-text"label="Your password"
+                          icon="lock"  type="password"  group type="password"  name="password" validate value={this.state.password} onChange={this.handleChange}/>
+                        <div className="text-center mt-4 black-text">
 
-            <MDBRow className='d-flex justify-content-center'>
-                <MDBCol md="10">
-                    <form>
-                        <div className='text-center'>
-                            <h3 className='form-header deep-blue-gradient rounded mb-5'>
-                                <strong>Sign up</strong>
-                            </h3>
+                          <MDBBtn color="amber" onClick={this.login} >Login</MDBBtn>
+                          <MDBBtn color="amber" onClick={this.sigup} >Sign Up</MDBBtn>
+                         
+                          <hr className="hr-light" />
+                          <StyledFirebaseAuth
+                            uiConfig={this.uiConfig}
+                            firebaseAuth={firebase.auth()}
+                            
+                          />
+                          
                         </div>
-
-                        <div className="grey-text">
-
-                            <MDBInput label="Your E-mail" icon="envelope" group type="email" validate error="wrong"
-                                success="right" name="email" className='pink-text mb-5' onChange={(e) => setEmail(e.target.value)} />
-
-                            <MDBInput label="Password" icon="lock" group type="password" name="password"
-                                validate error="wrong" success="right" className='pink-text mb-5' validate onChange={(e) => setPassword(e.target.value)} />
-
-                        </div>
-
-                        <div className="text-center">
-                            <MDBBtn color="primary" outline color="info" onClick={signup}>Register</MDBBtn>
-                            <MDBBtn color="primary" outline color="info" onClick={login}>LOGIN</MDBBtn>
-                        </div>
-
-                        <div className='footer pt-3 mdb-color lighten-3'>
-                            <MDBRow className='d-flex justify-content-center'>
-                                <p className='font-small white-text mb-2 pt-3'>
-                                    or Sign up with h
-                                </p>
-                            </MDBRow>
-
-
-                            <div className="row my-3 d-flex justify-content-center" >
-
-
-                                <MDBBtn type="button" color="white" rounded className="mr-md-3 z-depth-1a">
-                                    <MDBIcon fab icon="facebook-f" onClick={() => firebase.auth().SignInScreen().FacebookAuthProvider.PROVIDER_ID} className="blue-text text-center" /></MDBBtn>
-
-                                <MDBBtn type="button" color="white" rounded className="mr-md-3 z-depth-1a">
-                                    <MDBIcon fab icon="github"  className="blue-text" /></MDBBtn>
-
-                                <MDBBtn type="button" color="white" rounded className="z-depth-1a">
-                                    <MDBIcon fab icon="google-plus-g"  className="blue-text" /></MDBBtn>
-                           
-                                   
- 
-
-                            </div>
-
-                        </div>
-
-                    </form>
+                      </MDBCardBody>
+                    </MDBCard>
+                  </MDBAnimation>
                 </MDBCol>
-            </MDBRow>
-        </MDBContainer>
-
-
-
-
-
+              </MDBRow>
+            </MDBContainer>
+          </MDBMask>
+        </MDBView>
+        
+      </div>
     );
-};
-
-
-
+  }
+}
 
 export default LoginPage;
-
-
-
-
-

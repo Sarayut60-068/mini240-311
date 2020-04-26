@@ -2,6 +2,7 @@ import React from 'react'
 import { Button, Navbar, Nav, Form } from 'react-bootstrap'
 import './contact';
 import './Fooditem';
+import './Reviews';
 import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBInput,MDBMedia, MDBCard,MDBCardImage,MDBCardBody,MDBCardTitle,MDBCardText} from 'mdbreact';
 
 
@@ -15,6 +16,7 @@ const Fooditem = props => {
         <Nav className="mr-auto">
           <Nav.Link href="/Fooditem ">รายการอาหาร</Nav.Link>
           <Nav.Link href="/contact ">สั่งอาหาร</Nav.Link>
+          <Nav.Link href="/Reviews ">Reviews</Nav.Link>
         </Nav>
       </Navbar>
 
