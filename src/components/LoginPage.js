@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
-import {
-  MDBNavbar, MDBNavbarBrand, MDBMask, MDBRow, MDBCol, MDBIcon, MDBBtn, MDBView, MDBContainer, MDBCard, MDBCardBody, MDBInput, MDBAnimation
-} from "mdbreact";
-
+import {MDBNavbar, MDBNavbarBrand, MDBMask, MDBRow, MDBCol, MDBIcon, MDBBtn, MDBView, 
+  MDBContainer, MDBCard, MDBCardBody, MDBInput, MDBAnimation} from "mdbreact";
 import fire from "../firebasa/fire";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth'

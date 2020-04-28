@@ -6,6 +6,12 @@ import './Reviews';
 import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBInput } from 'mdbreact';
 import firebase from 'firebase'
 
+
+
+
+
+
+
 const contact = props => {
 
   return (
@@ -23,12 +29,13 @@ const contact = props => {
 
 <body>
 
-<section class="mb-6">
 
-  
+
+
+
+<section class="mb-6">
     <h2 class="h1-responsive font-weight-bold text-center my-4">สั่งอาหาร</h2>
-    
-    <p class="text-center w-responsive mx-auto mb-5">กรุณาบอกรายระเอียดของท่านตามความต้องการเช่น กินที่ร้าน หรือกลับบ้าน มารับประทานกี่คน ถึงแระมาณกี่โมง ไม่ใส่อะไรบ้าง เป็นต้น</p>
+   <p class="text-center w-responsive mx-auto mb-5">กรุณาบอกรายระเอียดของท่านตามความต้องการเช่น กินที่ร้าน หรือกลับบ้าน มารับประทานกี่คน ถึงแระมาณกี่โมง ไม่ใส่อะไรบ้าง เป็นต้น</p>
 
     <div class="row">
 
