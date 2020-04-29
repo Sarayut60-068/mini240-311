@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button, Navbar, Nav, Form } from 'react-bootstrap'
+import fire from '../firebasa/fire';
 import './contact';
 import './Fooditem';
 import './Reviews';
@@ -9,20 +10,29 @@ import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBInput,MDBMedia, MDBCard,MDBCar
 
 const Fooditem = props => {
 
-  return (
+  
+  const logout = () => {
+    fire.auth().signOut();
+}
+
+return (
     <div>
-      <Navbar bg="dark" variant="dark">
-        <Navbar.Brand href='/'>หน้าแรก</Navbar.Brand>
-        <Nav className="mr-auto">
-          <Nav.Link href="/Fooditem ">รายการอาหาร</Nav.Link>
-          <Nav.Link href="/contact ">สั่งอาหาร</Nav.Link>
-          <Nav.Link href="/Reviews ">Reviews</Nav.Link>
-        </Nav>
-      </Navbar>
+        <Navbar bg="dark" variant="dark">
+            <Navbar.Brand href='/'>หน้าแรก</Navbar.Brand>
+            <Nav className="mr-auto">
+                <Nav.Link href="/Fooditem ">รายการอาหาร</Nav.Link>
+                <Nav.Link href="/contact ">ติดต่อฉัน</Nav.Link>
+                <Nav.Link href="/Reviews ">Reviews</Nav.Link>
+            </Nav>
+            <Form inline>
+                <Button variant="outline-info" onClick={logout}>LogOut</Button>
+            </Form>
+        </Navbar>
+     
 
       <div >
-      <div class="container">
-  <div class="row">
+      <div class="container-fluid ">
+  <div class="row ">
     <div class="col-sm">
       <MDBCol >
       <MDBCard style={{ width: "22rem" }}>
@@ -32,7 +42,7 @@ const Fooditem = props => {
           <MDBCardText>
             ภาพใช้ประกอบเเพื่อการโฆษณา
           </MDBCardText>
-          <MDBBtn href="#">MDBBtn</MDBBtn>
+          
         </MDBCardBody>
       </MDBCard>
     </MDBCol>
@@ -46,7 +56,7 @@ const Fooditem = props => {
           <MDBCardText>
           ภาพใช้ประกอบเเพื่อการโฆษณา
           </MDBCardText>
-          <MDBBtn href="#">MDBBtn</MDBBtn>
+          
         </MDBCardBody>
       </MDBCard>
     </MDBCol>
@@ -60,7 +70,7 @@ const Fooditem = props => {
           <MDBCardText>
           ภาพใช้ประกอบเเพื่อการโฆษณา
           </MDBCardText>
-          <MDBBtn href="#">MDBBtn</MDBBtn>
+        
         </MDBCardBody>
       </MDBCard>
     </MDBCol>
@@ -74,7 +84,7 @@ const Fooditem = props => {
           <MDBCardText>
           ภาพใช้ประกอบเเพื่อการโฆษณา
           </MDBCardText>
-          <MDBBtn href="#">MDBBtn</MDBBtn>
+      
         </MDBCardBody>
       </MDBCard>
     </MDBCol>
@@ -89,7 +99,7 @@ const Fooditem = props => {
           <MDBCardText>
           ภาพใช้ประกอบเเพื่อการโฆษณา
           </MDBCardText>
-          <MDBBtn href="#">MDBBtn</MDBBtn>
+      
         </MDBCardBody>
       </MDBCard>
     </MDBCol>
@@ -103,7 +113,7 @@ const Fooditem = props => {
           <MDBCardText>
           ภาพใช้ประกอบเเพื่อการโฆษณา
           </MDBCardText>
-          <MDBBtn href="#">MDBBtn</MDBBtn>
+          
         </MDBCardBody>
       </MDBCard>
     </MDBCol>
@@ -118,7 +128,7 @@ const Fooditem = props => {
           <MDBCardText>
           ภาพใช้ประกอบเเพื่อการโฆษณา
           </MDBCardText>
-          <MDBBtn href="#">MDBBtn</MDBBtn>
+     
         </MDBCardBody>
       </MDBCard>
     </MDBCol>
@@ -135,7 +145,23 @@ const Fooditem = props => {
       <MDBCardText>
       ภาพใช้ประกอบเเพื่อการโฆษณา
       </MDBCardText>
-      <MDBBtn href="#">MDBBtn</MDBBtn>
+    
+    </MDBCardBody>
+  </MDBCard>
+</MDBCol>
+
+</div>
+<div class="col-sm">
+
+<MDBCol class="col-lg-4 col-md-6">
+  <MDBCard style={{ width: "22rem" }}>
+    <MDBCardImage className="img-fluid" src="https://i.pinimg.com/originals/39/8b/96/398b96b8c70198e345468e5e5d1665c2.jpg" waves />
+    <MDBCardBody>
+      <MDBCardTitle>ก๋วยเตี๋ยวไก่ตุ๋น</MDBCardTitle>
+      <MDBCardText>
+      ภาพใช้ประกอบเเพื่อการโฆษณา
+      </MDBCardText>
+      
     </MDBCardBody>
   </MDBCard>
 </MDBCol>

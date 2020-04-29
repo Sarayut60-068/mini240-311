@@ -7,8 +7,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth'
 import firebase from 'firebase'
 
+import './LoginForm.css'
 
-document.body.style.backgroundImage = "url('https://c.wallhere.com/photos/1f/7f/Haruhara_Haruko_FLCL_anime_noodles_simple_background-210624.jpg!d')";
+
+document.body.style.backgroundImage = "url('https://png.pngtree.com/thumb_back/fw800/background/20190223/ourmid/pngtree-delicious-noodle-background-material-bowl-of-noodlesfresh-image_82093.jpg')";
 
 class LoginPage extends Component {
 
@@ -83,17 +85,14 @@ class LoginPage extends Component {
   render() {
 
     return (
+      
 
-      <div id="classicformpage">
-       
+      <div id="classicformpage row my-3 d-flex justify-content-center " >
         
-
-        <MDBView>
+       <MDBView  >
           <MDBMask className="d-flex justify-content-center align-items-center gradient ">
             <MDBContainer  className=' align-items-center'>
-              <MDBRow>
-              
-
+              <MDBRow >
                 <MDBCol md="6" xl="5" className="mb-4">
                   <MDBAnimation type="fadeInRight" delay=".3s">
                     <MDBCard id="classic-card">
@@ -102,7 +101,7 @@ class LoginPage extends Component {
                 <img src="https://scontent.fbkk5-4.fna.fbcdn.net/v/t1.0-9/s960x960/51095734_1180564112147452_1471511896472420352_o.jpg?_nc_cat=110&_nc_sid=85a577&_nc_eui2=AeGcYscU0D2jhgjcw8RJJmATiCYbrg_vJOKIJhuuD-8k4ufJGBh_aq5uVbBPKZAmHEeVioJYXb-fw_fHJ69o_9dV&_nc_ohc=ucUfD9erfzMAX-sW2ZD&_nc_ht=scontent.fbkk5-4.fna&_nc_tp=7&oh=db36bcaa38686ff1a60b548052466595&oe=5EBD6C9A"
                     className="img-thumbnail justify-content-center " width="200" height="90" /></div>
                         <h3 className="text-center">
-                          <MDBIcon icon="user" /> Register:
+                          <MDBIcon icon="user" /> Register
                         </h3>
                         <hr className="hr-light" />
                         <MDBInput
@@ -114,13 +113,12 @@ class LoginPage extends Component {
                         <div className="text-center mt-4 black-text">
 
                           <MDBBtn color="amber" onClick={this.login} >Login</MDBBtn>
-                          <MDBBtn color="amber" onClick={this.sigup} >Sign Up</MDBBtn>
+                          <MDBBtn color="amber" onClick={this.sigup}  >Sign Up</MDBBtn>
                          
                           <hr className="hr-light" />
                           <StyledFirebaseAuth
                             uiConfig={this.uiConfig}
                             firebaseAuth={firebase.auth()}
-                            
                           />
                           
                         </div>
@@ -134,7 +132,7 @@ class LoginPage extends Component {
         </MDBView>
         
       </div>
-    );
+       );
   }
 }
 

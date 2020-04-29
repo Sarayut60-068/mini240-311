@@ -3,20 +3,28 @@ import { Button, Navbar, Nav, Form } from 'react-bootstrap'
 import './contact';
 import './Fooditem';
 import './Reviews';
+import fire from '../firebasa/fire';
 import { MDBRow, MDBCol, MDBCard, MDBCardBody, MDBMask, MDBIcon, MDBView, MDBBtn,MDBCardTitle,MDBCardText} from 'mdbreact';
 
 const Reviews = props => {
 
-  return (
+  const logout = () => {
+    fire.auth().signOut();
+}
+
+return (
     <div>
-      <Navbar bg="dark" variant="dark">
-        <Navbar.Brand href='/'>หน้าแรก</Navbar.Brand>
-        <Nav className="mr-auto">
-          <Nav.Link href="/Fooditem ">รายการอาหาร</Nav.Link>
-          <Nav.Link href="/contact ">สั่งอาหาร</Nav.Link>
-          <Nav.Link href="/Reviews ">Reviews</Nav.Link>
-        </Nav>
-      </Navbar>
+        <Navbar bg="dark" variant="dark">
+            <Navbar.Brand href='/'>หน้าแรก</Navbar.Brand>
+            <Nav className="mr-auto">
+                <Nav.Link href="/Fooditem ">รายการอาหาร</Nav.Link>
+                <Nav.Link href="/contact ">ติดต่อฉัน</Nav.Link>
+                <Nav.Link href="/Reviews ">Reviews</Nav.Link>
+            </Nav>
+            <Form inline>
+                <Button variant="outline-info" onClick={logout}>LogOut</Button>
+            </Form>
+        </Navbar>
    <div>
  
 
@@ -178,11 +186,9 @@ const Reviews = props => {
       </MDBCardBody>
     </MDBCard>
   
-
-  
-
     </div>
  </div>
+
 
     
   )

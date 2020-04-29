@@ -7,7 +7,6 @@ import './Reviews';
 import { MDBMedia ,MDBIcon} from 'mdbreact';
 
 
-
 const Topborder = () => {
 
     const logout = () => {
@@ -15,12 +14,13 @@ const Topborder = () => {
     }
 
     return (
+        
         <div>
             <Navbar bg="dark" variant="dark">
                 <Navbar.Brand href='/'>หน้าแรก</Navbar.Brand>
                 <Nav className="mr-auto">
                     <Nav.Link href="/Fooditem ">รายการอาหาร</Nav.Link>
-                    <Nav.Link href="/contact ">สั่งอาหาร</Nav.Link>
+                    <Nav.Link href="/contact ">ติดต่อฉัน</Nav.Link>
                     <Nav.Link href="/Reviews ">Reviews</Nav.Link>
                 </Nav>
                 <Form inline>
