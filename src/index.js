@@ -7,6 +7,14 @@ import * as serviceWorker from './serviceWorker';
 import { BrowserRouter, Route, Link, Router } from 'react-router-dom';
 import { browserHistory } from 'react-router';
 import ReactDOM, { render } from 'react-dom';
+import config from '../src/components/config'
+import firebase from 'firebase/app'
+import 'firebase/firestore'
+
+if (firebase.apps.length === 0)
+  firebase.initializeApp(config)
+
+export const firestore = firebase.firestore()
 
 render(
   <BrowserRouter>
